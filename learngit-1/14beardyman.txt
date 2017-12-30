@@ -1,1 +1,59 @@
-谢谢老师~
+<learning notes>
+
+$ git init 创建仓库
+$ git add file.txt 文件添加到仓库
+$ git commit -m "do what" 文件提交到仓库
+$ git status 查看状态
+$ git diff HEAD -- file.txt 查看工作区和版本库最新版本的区别
+$ git log 查看提交历史
+$ git reset --hard HEAD^ /当前版本回退 (历史版本 commit id) 
+$ cat file.txt 
+$ git reflog 查看命令历史
+$ git checkout -- file.txt 丢弃修改
+$ git rm file.txt 删除文件（文件管理器）
+$ git checkout -- file.txt (恢复文件)
+$ ssh-keygen -t rsa -C "466344746@qq.com" 创建SSH Key
+
+$ git remote add origin git@github.com:14beardyman/learngit.git 关联远程库
+$ git push -u origin master 第一次推送master分支
+$ git push origin master 推送最新修改
+$ git clone git@github.com:14beardyman/folder.git 克隆本地库
+$ git branch dev 创建分支
+$ git checkout dev 切换分支
+$ git checkout -b dev 创建并切换到dev分支
+$ git branch 查看分支
+$ git checkout master 切换回master分支
+$ git merge dev 合并dev分支到master分支(fast forward)
+$ git branch -d dev 删除dev分支
+$ git merge --no-ff -m "mrege with no-ff" dev 
+$ git log --graph --pretty=oneline --abbrev-commit 查看分支的合并情况
+$ git stash 储藏当前工作
+$ git checkout master 切换到mster分支修复bug
+$ git checkout dev 
+$ git stash list 查看工作现场
+$ git stash pop 恢复工作现场
+$ git stash apply stash@{0} 恢复指定的stash
+$ git checkout -b feature-vulcan  
+$ git branch -d feature-vulcan 销毁分支
+$ git branch -D feature-vulcan 强制删除
+$ git remote 查看远程库
+$ git remote -v 详细信息
+$ git push origin master 推送该分支到远程分支
+$ gtt checkout -b dev origin/dev 创建远程origin的dev 到本地
+$ git commit -m "add/usr/bin/env"
+$ git push origin dev 推送dev分支到远程
+$ git pull 最新的提交在本地合并，解决冲突
+$ git branch --set-upstream dev origin/dev 设置dev和origin/dev的链接
+$ git pull 解决冲突，提交再push
+$ git tag v1.0 创建标签
+$ git tag 查看标签
+$ git log --pretty=oneline --abbrev-commit 
+$ git tag v0.9 commit id
+$ git show v0.9 查看标签信息
+$ git tag -a v1.0 -m "version 0.1 released" commit id 创建带有说明的标签
+$ git tag -s v0.2 -m "signed wersion 0.2" commit id 用私钥签名一个标签
+$ git tag -d v0.2 删除标签
+$ git push origin v1.0 推送到远程
+$ git push origin --tag 推送全部
+$ git push origin :refs/tags/v0.9 从远程删除
+$ git config --global color.ui true
